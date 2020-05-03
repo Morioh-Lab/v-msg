@@ -4,7 +4,7 @@
 
 ### Demo
 
-☞ [Markdown Editor](https://lab.morioh.com/v-msg/)
+☞ [V-MSG Preview](https://lab.morioh.com/v-msg/)
 
 
 ### How to use
