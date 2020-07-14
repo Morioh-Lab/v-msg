@@ -1,74 +1,81 @@
 <template>
-    <div class="v-msg-container">
+    <div>
         <div class="v-msg-container v-msg-top-right">
-            <transition-group enter-active-class="animated quick fadeInRight" leave-active-class="animated quick fadeOutRight">
-                <div class="v-msg-box" :class="{[t.theme]: t.theme}" v-for="t in pool['top-right']" :key="t.key">
+            <transition-group enter-active-class="animated quick fadeInRight"
+                leave-active-class="animated quick fadeOutRight">
+                <div class="alert alert-dismissible" role="alert" :class="{[t.theme]: t.theme}"
+                    v-for="t in pool['top-right']" :key="t.key">
+
+                    <h5 class="alert-heading" v-if="t.title">{{t.title}}</h5>
+                    {{t.message}}
                     <button aria-label="Close" data-dismiss="alert" class="close" type="button" @click="remove(t)">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6 class="v-msg-title" v-if="t.title">{{t.title}}</h6>
-                    {{t.message}}
                 </div>
             </transition-group>
         </div>
         <div class="v-msg-container v-msg-top-left">
             <transition-group enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutLeft">
-                <div class="v-msg-box" :class="{[t.theme]: t.theme}" v-for="t in pool['top-left']" :key="t.key">
+                <div class="alert alert-dismissible" role="alert" :class="{[t.theme]: t.theme}"
+                    v-for="t in pool['top-left']" :key="t.key">
+
+                    <h5 class="alert-heading" v-if="t.title">{{t.title}}</h5>
+                    {{t.message}}
                     <button aria-label="Close" data-dismiss="alert" class="close" type="button" @click="remove(t)">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6 class="v-msg-title" v-if="t.title">{{t.title}}</h6>
-                    {{t.message}}
                 </div>
             </transition-group>
         </div>
         <div class="v-msg-container v-msg-bottom-left">
             <transition-group enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutLeft">
-                <div class="v-msg-box" :class="{[t.theme]: t.theme}" v-for="t in pool['bottom-left']" :key="t.key">
+                <div class="alert alert-dismissible" role="alert" :class="{[t.theme]: t.theme}"
+                    v-for="t in pool['bottom-left']" :key="t.key">
+
+                    <h5 class="alert-heading" v-if="t.title">{{t.title}}</h5>
+                    {{t.message}}
                     <button aria-label="Close" data-dismiss="alert" class="close" type="button" @click="remove(t)">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6 class="v-msg-title" v-if="t.title">{{t.title}}</h6>
-                    {{t.message}}
                 </div>
             </transition-group>
         </div>
         <div class="v-msg-container v-msg-bottom-right">
             <transition-group enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutRight">
-                <div class="v-msg-box" :class="{[t.theme]: t.theme}" v-for="t in pool['bottom-right']" :key="t.key">
+                <div class="alert alert-dismissible" role="alert" :class="{[t.theme]: t.theme}"
+                    v-for="t in pool['bottom-right']" :key="t.key">
+                    <h5 class="alert-heading" v-if="t.title">{{t.title}}</h5>
+                    {{t.message}}
                     <button aria-label="Close" data-dismiss="alert" class="close" type="button" @click="remove(t)">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6 class="v-msg-title" v-if="t.title">{{t.title}}</h6>
-                    {{t.message}}
                 </div>
             </transition-group>
         </div>
         <div class="v-msg-container v-msg-top-center">
             <transition-group enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown">
-                <div class="v-msg-box" :class="{[t.theme]: t.theme}" v-for="t in pool['top-center']" :key="t.key">
+                <div class="alert alert-dismissible" role="alert" :class="{[t.theme]: t.theme}"
+                    v-for="t in pool['top-center']" :key="t.key">
+                    <h5 class="alert-heading" v-if="t.title">{{t.title}}</h5>
+                    {{t.message}}
                     <button aria-label="Close" data-dismiss="alert" class="close" type="button" @click="remove(t)">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6 class="v-msg-title" v-if="t.title">{{t.title}}</h6>
-                    {{t.message}}
                 </div>
             </transition-group>
         </div>
         <div class="v-msg-container v-msg-bottom-center">
             <transition-group enter-active-class="animated fadeInUp" leave-active-class="animated fadeOut">
-                <div class="v-msg-box" :class="{[t.theme]: t.theme}" v-for="t in pool['bottom-center']" :key="t.key">
+                <div class="alert alert-dismissible" role="alert" :class="{[t.theme]: t.theme}"
+                    v-for="t in pool['bottom-center']" :key="t.key">
+                    <h5 class="alert-heading" v-if="t.title">{{t.title}}</h5>
+                    {{t.message}}
                     <button aria-label="Close" data-dismiss="alert" class="close" type="button" @click="remove(t)">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6 class="v-msg-title" v-if="t.title">{{t.title}}</h6>
-                    {{t.message}}
                 </div>
             </transition-group>
         </div>
-
-
-
 
 
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" v-if="msg">
@@ -77,16 +84,17 @@
 
         <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOut" v-if="msg">
             <div class="v-msg-container v-msg-alert">
-                <div class="v-msg-box">
-                    <button aria-label="Close" class="close" type="button" @click="close(0)">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h6 class="v-msg-title" v-if="msg.title">{{msg.title}}</h6>
-                    <p class="v-msg-content">{{msg.message}}</p>
+                <div class="alert alert-primary" role="alert">
 
-                    <div class="v-msg-bottom">
-                        <button class="btn btn-primary" @click="close(1)">{{msg.btn.ok}}</button>
-                        <button class="btn btn-light float-right" v-if="msg.type=='confirm'" @click="close(0)">{{msg.btn.cancel}}</button>
+                    <h5 class="alert-heading" v-if="msg.title">{{msg.title}}</h5>
+                    <div class="mb-15">{{msg.message}}</div>                   
+
+                    <div class="d-flex justify-content-between">
+                       
+                        <button class="btn btn-outline-primary" @click="close(1)">{{msg.btn.ok}}</button>
+                        <button class="btn btn-outline-secondary float-right" v-if="msg.type=='confirm'"
+                        @click="close(0)">{{msg.btn.cancel}}</button>
+
                     </div>
                 </div>
             </div>
@@ -127,16 +135,16 @@
         },
         methods: {
             success(message, option = {}) {
-                return this.add(message, Object.assign(option, { theme: 'v-notify-success' }));
+                return this.add(message, Object.assign(option, { theme: 'alert-success' }));
             },
             info(message, option = {}) {
-                return this.add(message, Object.assign(option, { theme: 'v-notify-info' }));
+                return this.add(message, Object.assign(option, { theme: 'alert-info' }));
             },
             warning(message, option = {}) {
-                return this.add(message, Object.assign(option, { theme: 'v-notify-warning' }));
+                return this.add(message, Object.assign(option, { theme: 'alert-warning' }));
             },
             error(message, option = {}) {
-                return this.add(message, Object.assign(option, { theme: 'v-notify-error' }));
+                return this.add(message, Object.assign(option, { theme: 'alert-error' }));
             },
             alert(message, option = {}) {
                 return this.add(message, Object.assign(option, { type: 'alert' }));

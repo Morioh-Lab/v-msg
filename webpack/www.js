@@ -166,8 +166,7 @@ module.exports = {
           module: 'css',
           entry: [
             // 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css',
-            'https://cdn.jsdelivr.net/npm/morioh@1.0.9/dist/css/morioh.min.css',
-            'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css',
+            'https://cdn.jsdelivr.net/npm/morioh@1.1.2/dist/css/morioh.min.css',            
             'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css',
 
           ],

@@ -1,8 +1,8 @@
 {
   "name": "@morioh/v-msg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple notify handler component for Vue.js",
-  "main": "./dist/msg.min.js",
+  "main": "./src",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --progress --watch --colors",
     "prod": "cross-env NODE_ENV=production webpack -p --watch --progress --colors",

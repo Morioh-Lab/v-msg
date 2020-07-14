@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './app.vue'
-import '../dist/msg.min.css';
+import '../src/msg.css';
 
-import Msg from '../dist/msg.min.js';
+import Msg from '../src';
 
 Vue.use(Msg);
 

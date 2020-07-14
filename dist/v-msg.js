@@ -201,6 +201,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data() {
     return {
@@ -231,28 +239,28 @@ __webpack_require__.r(__webpack_exports__);
     success(message) {
       var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       return this.add(message, Object.assign(option, {
-        theme: 'v-notify-success'
+        theme: 'alert-success'
       }));
     },
 
     info(message) {
       var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       return this.add(message, Object.assign(option, {
-        theme: 'v-notify-info'
+        theme: 'alert-info'
       }));
     },
 
     warning(message) {
       var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       return this.add(message, Object.assign(option, {
-        theme: 'v-notify-warning'
+        theme: 'alert-warning'
       }));
     },
 
     error(message) {
       var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       return this.add(message, Object.assign(option, {
-        theme: 'v-notify-error'
+        theme: 'alert-error'
       }));
     },
 
@@ -332,7 +340,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "v-msg-container" },
     [
       _c(
         "div",
@@ -352,10 +359,21 @@ var render = function() {
                 "div",
                 {
                   key: t.key,
-                  staticClass: "v-msg-box",
-                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj)
+                  staticClass: "alert alert-dismissible",
+                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj),
+                  attrs: { role: "alert" }
                 },
                 [
+                  t.title
+                    ? _c("h5", { staticClass: "alert-heading" }, [
+                        _vm._v(_vm._s(t.title))
+                      ])
+                    : _vm._e(),
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(t.message) +
+                      "\n                "
+                  ),
                   _c(
                     "button",
                     {
@@ -376,15 +394,6 @@ var render = function() {
                         _vm._v("×")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  t.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(t.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(
-                    "\n                " + _vm._s(t.message) + "\n            "
                   )
                 ]
               )
@@ -413,10 +422,21 @@ var render = function() {
                 "div",
                 {
                   key: t.key,
-                  staticClass: "v-msg-box",
-                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj)
+                  staticClass: "alert alert-dismissible",
+                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj),
+                  attrs: { role: "alert" }
                 },
                 [
+                  t.title
+                    ? _c("h5", { staticClass: "alert-heading" }, [
+                        _vm._v(_vm._s(t.title))
+                      ])
+                    : _vm._e(),
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(t.message) +
+                      "\n                "
+                  ),
                   _c(
                     "button",
                     {
@@ -437,15 +457,6 @@ var render = function() {
                         _vm._v("×")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  t.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(t.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(
-                    "\n                " + _vm._s(t.message) + "\n            "
                   )
                 ]
               )
@@ -474,10 +485,21 @@ var render = function() {
                 "div",
                 {
                   key: t.key,
-                  staticClass: "v-msg-box",
-                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj)
+                  staticClass: "alert alert-dismissible",
+                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj),
+                  attrs: { role: "alert" }
                 },
                 [
+                  t.title
+                    ? _c("h5", { staticClass: "alert-heading" }, [
+                        _vm._v(_vm._s(t.title))
+                      ])
+                    : _vm._e(),
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(t.message) +
+                      "\n                "
+                  ),
                   _c(
                     "button",
                     {
@@ -498,15 +520,6 @@ var render = function() {
                         _vm._v("×")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  t.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(t.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(
-                    "\n                " + _vm._s(t.message) + "\n            "
                   )
                 ]
               )
@@ -535,10 +548,21 @@ var render = function() {
                 "div",
                 {
                   key: t.key,
-                  staticClass: "v-msg-box",
-                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj)
+                  staticClass: "alert alert-dismissible",
+                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj),
+                  attrs: { role: "alert" }
                 },
                 [
+                  t.title
+                    ? _c("h5", { staticClass: "alert-heading" }, [
+                        _vm._v(_vm._s(t.title))
+                      ])
+                    : _vm._e(),
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(t.message) +
+                      "\n                "
+                  ),
                   _c(
                     "button",
                     {
@@ -559,15 +583,6 @@ var render = function() {
                         _vm._v("×")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  t.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(t.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(
-                    "\n                " + _vm._s(t.message) + "\n            "
                   )
                 ]
               )
@@ -596,10 +611,21 @@ var render = function() {
                 "div",
                 {
                   key: t.key,
-                  staticClass: "v-msg-box",
-                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj)
+                  staticClass: "alert alert-dismissible",
+                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj),
+                  attrs: { role: "alert" }
                 },
                 [
+                  t.title
+                    ? _c("h5", { staticClass: "alert-heading" }, [
+                        _vm._v(_vm._s(t.title))
+                      ])
+                    : _vm._e(),
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(t.message) +
+                      "\n                "
+                  ),
                   _c(
                     "button",
                     {
@@ -620,15 +646,6 @@ var render = function() {
                         _vm._v("×")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  t.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(t.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(
-                    "\n                " + _vm._s(t.message) + "\n            "
                   )
                 ]
               )
@@ -657,10 +674,21 @@ var render = function() {
                 "div",
                 {
                   key: t.key,
-                  staticClass: "v-msg-box",
-                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj)
+                  staticClass: "alert alert-dismissible",
+                  class: ((_obj = {}), (_obj[t.theme] = t.theme), _obj),
+                  attrs: { role: "alert" }
                 },
                 [
+                  t.title
+                    ? _c("h5", { staticClass: "alert-heading" }, [
+                        _vm._v(_vm._s(t.title))
+                      ])
+                    : _vm._e(),
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(t.message) +
+                      "\n                "
+                  ),
                   _c(
                     "button",
                     {
@@ -681,15 +709,6 @@ var render = function() {
                         _vm._v("×")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  t.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(t.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(
-                    "\n                " + _vm._s(t.message) + "\n            "
                   )
                 ]
               )
@@ -724,65 +743,59 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "v-msg-container v-msg-alert" }, [
-                _c("div", { staticClass: "v-msg-box" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "close",
-                      attrs: { "aria-label": "Close", type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.close(0)
-                        }
-                      }
-                    },
-                    [
-                      _c("span", { attrs: { "aria-hidden": "true" } }, [
-                        _vm._v("×")
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm.msg.title
-                    ? _c("h6", { staticClass: "v-msg-title" }, [
-                        _vm._v(_vm._s(_vm.msg.title))
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "v-msg-content" }, [
-                    _vm._v(_vm._s(_vm.msg.message))
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "v-msg-bottom" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-primary",
-                        on: {
-                          click: function($event) {
-                            return _vm.close(1)
-                          }
-                        }
-                      },
-                      [_vm._v(_vm._s(_vm.msg.btn.ok))]
-                    ),
+                _c(
+                  "div",
+                  {
+                    staticClass: "alert alert-primary",
+                    attrs: { role: "alert" }
+                  },
+                  [
+                    _vm.msg.title
+                      ? _c("h5", { staticClass: "alert-heading" }, [
+                          _vm._v(_vm._s(_vm.msg.title))
+                        ])
+                      : _vm._e(),
                     _vm._v(" "),
-                    _vm.msg.type == "confirm"
-                      ? _c(
+                    _c("div", { staticClass: "mb-15" }, [
+                      _vm._v(_vm._s(_vm.msg.message))
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "d-flex justify-content-between" },
+                      [
+                        _c(
                           "button",
                           {
-                            staticClass: "btn btn-light float-right",
+                            staticClass: "btn btn-outline-primary",
                             on: {
                               click: function($event) {
-                                return _vm.close(0)
+                                return _vm.close(1)
                               }
                             }
                           },
-                          [_vm._v(_vm._s(_vm.msg.btn.cancel))]
-                        )
-                      : _vm._e()
-                  ])
-                ])
+                          [_vm._v(_vm._s(_vm.msg.btn.ok))]
+                        ),
+                        _vm._v(" "),
+                        _vm.msg.type == "confirm"
+                          ? _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "btn btn-outline-secondary float-right",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.close(0)
+                                  }
+                                }
+                              },
+                              [_vm._v(_vm._s(_vm.msg.btn.cancel))]
+                            )
+                          : _vm._e()
+                      ]
+                    )
+                  ]
+                )
               ])
             ]
           )

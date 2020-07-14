@@ -11,65 +11,65 @@
 
                     <div class="row">
                         <div class="col-12 col-lg-8">
-                            <div class="form-group">
+                            <div class="mb-15">
                                 <button class="btn btn-primary" @click="show('top-left')">top-left</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.success('This is a notification', { position: 'top-left' });</code></pre>
                             </div>
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="show('top-right')">top-right</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.success('This is a notification', { position: 'top-right' });</code></pre>
                             </div>
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="show('top-center')">top-center</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.success('This is a notification', { position: 'top-center' });</code></pre>
                             </div>
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="show('bottom-left')">bottom-left</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.success('This is a notification', { position: 'bottom-left' });</code></pre>
                             </div>
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="show('bottom-right')">bottom-right</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.success('This is a notification', { position: 'bottom-right' });</code></pre>
                             </div>
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="show('bottom-center')">bottom-center</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.success('This is a notification', { position: 'bottom-center' });</code></pre>
                             </div>
 
 
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="alert()">alert</button>
                                 <pre data-lang="js"><code>this.$Msg.alert('This is a notification');</code></pre>
                             </div>
 
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="confirm()">confirm</button>
                                 <pre data-lang="js"><code>this.$Msg.confirm('Are you sure want to delete this item?').then(({ data }) => {
                                         alert('You choose: ' + data);
                                     })</code></pre>
                             </div>
 
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-info" @click="info()">info</button>
                                 <pre data-lang="js"><code>this.$Msg.info('This is a notification');</code></pre>
                             </div>
 
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-warning" @click="warning()">warning</button>
                                 <pre data-lang="js"><code>this.$Msg.warning('This is a notification');</code></pre>
                             </div>
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-danger" @click="error()">error</button>
                                 <pre data-lang="js"><code>this.$Msg.error('This is a notification');</code></pre>
                             </div>
 
-                           <div class="form-group">
+                           <div class="mb-15">
                                 <button class="btn btn-primary" @click="timeout()">timeout</button>
                                 <pre
                                     data-lang="js"><code>this.$Msg.info('This is a notification',{timeout: 3000});</code></pre>
@@ -89,14 +89,14 @@
 
 
         <footer class="text-center">
-           <div class="form-group">
+           <div class="mb-15">
                 <a class="social-icon" href="https://github.com/Morioh-Lab/v-msg" target="_blank">
                     <i class="fa-3x fab fa-github-square"></i>
                 </a>
 
             </div>
 
-           <div class="form-group">Themed by <a href="http://on.morioh.net/96d5d36367" target="_blank">Morioh Theme</a><br>
+           <div class="mb-15">Themed by <a href="http://on.morioh.net/96d5d36367" target="_blank">Morioh Theme</a><br>
                 Made Love by <a href="https://morioh.com">Morioh Team</a>
 
             </div>
